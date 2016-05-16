@@ -19,6 +19,13 @@
         <clobbers target="window.FullScreenImage" />
     </js-module>
 
+    <!-- browser -->
+    <platform name="browser">
+        <js-module src="src/browser/FullScreenImageProxy.js" name="FullScreenImageProxy">
+            <runs />
+        </js-module>
+    </platform>
+
     <!-- ios -->
      <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -32,8 +39,8 @@
          <source-file src="src/ios/NSData+Base64.m" />
     </platform>
 
-	<!-- Android -->
- 	<platform name="android">
+    <!-- Android -->
+    <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="FullScreenImage">
                 <param name="android-package" value="es.keensoft.fullscreenimage.FullScreenImage" />
